@@ -1,0 +1,39 @@
+매크로함수쓰는이유
+
+싱글톤 자주 쓰면 안되는 이유
+enum class랑 enum 차이
+네임 스페이스로 묶어둔 이유
+
+네임스페이스에 인터페이스 Scene이거 해두면 
+네임 스페이스 엔진으로 묶인 모든 코드에 Scene 순수가상함수 처럼 되서 만들어야되는건지
+
+변수 초기화  
+이런식으로 하는 이유가 뭔지
+
+TimeManager() : FPS(0), elapseTime(0.0f), currTime(0), lastTime(0){ }
+
+
+COSNT로 하는이유
+FLOAT DeltaTime() CONST { return elapseTime; }
+
+
+
+헤더를 헤더에 안넣고 따로 cpp에 넣는이유
+
+#ifndef SINGLETON_H
+#define SINGLETON_H
+#endif // !SINGLETON_H
+이거하는이유
+
+⁻ TimeManager 클래스의 생성자가 private이기 때문에 Singleton class를 friend로 만들어 준다
+무슨소리지?
+
+
+Scene* currScene;
+
+함수밖에없는걸 변수로가진다는거 잘모르겠다
+
+std::unordered_map 정확히먼지모르겠음
+
+
+Capture가 머냐
