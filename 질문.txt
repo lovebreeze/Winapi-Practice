@@ -37,3 +37,76 @@ std::unordered_map 정확히먼지모르겠음
 
 
 Capture가 머냐
+Scene* currScene;
+
+
+==============================================
+
+==============================================
+
+==============================================
+
+
+물어보는거 깜빡했는데
+
+ 자료형 왜 BOOL 처럼 대문자로 하는지 UINT 는 unsigned int 길어서 줄인건 알겠음
+
+
+34page
+
+BOOL Bitmap::BitBlt(INT32 x, INT32 y)
+{
+return ::BitBlt(SceneMgr->GetBackDC(), pivot.x + x, pivot.y + y, src.right, src.bottom, memDC, src.left, src.top, SRCCOPY);
+}
+BOOL Bitmap::StretchBlt(INT32 x, INT32 y)
+{
+return ::StretchBlt(SceneMgr->GetBackDC(), pivot.x + x, pivot.y + y, dest.cx, dest.cy, memDC, src.left, src.top, src.right, src.bottom, SRCCOPY);
+}
+BOOL Bitmap::TransparentBlt(INT32 x, INT32 y, UINT transparent)
+{
+return ::TransparentBlt(SceneMgr->GetBackDC(), pivot.x + x, pivot.y + y, dest.cx, dest.cy, memDC, src.left, src.top, src.right, src.bottom, transparent);
+}
+
+
+::만 붙은거 무슨뜻인지 
+
+35page
+
+static const char* defaultPath = "Resources\\"; 왜 스태틱?
+
+37page
+#include <io.h>  
+#define _SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING 
+// c++17 이상의 경우 #include<filesystem>를 사용.
+#include <experimental/filesystem> // directory_iterator()
+
+처음보는 헤더들임 
+
+access 함수 뭔지모르겠음
+
+38page 
+path가 먼지
+path관련 함수 전부 
+
+path = file.path();
+if (".bmp" != path.extension().u8string()) continue; // 비트맵 리소스만을 로드.
+name = path.u8string();
+
+40 page
+
+		UIPanel* parent;
+		std::vector<UIPanel*> child;
+약간 list처럼 가지고 있는건지
+
+// 자식으로 추가된 ui는 알아서 메모리를 해제한다. 
+
+무슨소린지
+
+
+42 page 
+
+ { uiType = UIType::PANEL; } 왜 이거만 지역안에서 초기화했는지
+
+멤버변수 건드릴때 this->pivotCenter = pivotCenter; 이런식으로 굳이 this쓰는이유
+
+43page unique 함수 ?
