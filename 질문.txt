@@ -58,15 +58,6 @@ BOOL Bitmap::BitBlt(INT32 x, INT32 y)
 {
 return ::BitBlt(SceneMgr->GetBackDC(), pivot.x + x, pivot.y + y, src.right, src.bottom, memDC, src.left, src.top, SRCCOPY);
 }
-BOOL Bitmap::StretchBlt(INT32 x, INT32 y)
-{
-return ::StretchBlt(SceneMgr->GetBackDC(), pivot.x + x, pivot.y + y, dest.cx, dest.cy, memDC, src.left, src.top, src.right, src.bottom, SRCCOPY);
-}
-BOOL Bitmap::TransparentBlt(INT32 x, INT32 y, UINT transparent)
-{
-return ::TransparentBlt(SceneMgr->GetBackDC(), pivot.x + x, pivot.y + y, dest.cx, dest.cy, memDC, src.left, src.top, src.right, src.bottom, transparent);
-}
-
 
 ::만 붙은거 무슨뜻인지 
 
@@ -110,3 +101,22 @@ name = path.u8string();
 멤버변수 건드릴때 this->pivotCenter = pivotCenter; 이런식으로 굳이 this쓰는이유
 
 43page unique 함수 ?
+
+46p 
+GetTextExtentPoint32A() 
+SetBkMode() 
+처음보는함수
+
+50p
+
+typedef std::function<VOID()> EventListener;
+
+구조체로 만든이유.
+
+무슨역할?
+
+52p
+PtInRect 처음보는 함수
+
+ if (pressedListener) 
+어떤식으로 작동하는지
